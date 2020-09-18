@@ -56,6 +56,8 @@ jobs:
         # sed -i '/自定义项/d' .config
         # echo "自定义项=y" >> .config
         #########################################################################################
+        rm configs/templates/RM2100.config
+        wget -O configs/templates/RM2100.config https://github.com/wegood9/Padavan-build/raw/master/config
         sudo ./clear_tree
         sudo fakeroot ./build_firmware_modify $TNAME
         #sudo ./build_firmware_modify $TNAME 0
