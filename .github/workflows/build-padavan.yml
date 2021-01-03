@@ -40,7 +40,8 @@ jobs:
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
-        sh /opt/rt-n65u/trunk/tools/shellcheck.sh
+        cd /opt/rt-n56u
+        sh ./trunk/tools/shellcheck.sh
     - name: Build Firmware
       env:
         TNAME: RM2100
