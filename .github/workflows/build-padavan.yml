@@ -25,7 +25,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
@@ -40,6 +40,7 @@ jobs:
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
+        sh /opt/rt-n65u/trunk/tools/shellcheck.sh
     - name: Build Firmware
       env:
         TNAME: RM2100
